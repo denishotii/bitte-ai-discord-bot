@@ -2,7 +2,7 @@
 
 A powerful Discord bot that integrates multiple AI agents to provide comprehensive crypto, DeFi, and memecoin information, along with risk analysis and wallet connectivity.
 
-[![Discord](https://img.shields.io/discord/your-server-id?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/bitte)
+[![Discord](https://img.shields.io/discord/your-server-id?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/v7Yfw3Eu)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)](https://www.docker.com/)
 
