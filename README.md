@@ -124,6 +124,12 @@ npm start
 
 ## 📚 Available Commands
 
+### Basic Commands
+- `/hello` - Get a friendly greeting and basic bot information
+  - Shows bot status and uptime
+  - Displays available commands
+  - Provides quick help information
+
 ### AI Commands
 - `/ask` - General purpose AI assistant
   - Select from different AI agents
