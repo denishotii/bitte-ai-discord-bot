@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - BITTE_API_KEY=${BITTE_API_KEY}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - CLIENT_ID=${CLIENT_ID}
+      - GUILD_ID=${GUILD_ID}
+    volumes:
+      - ./src:/app/src
+      - ./conversations.db:/app/conversations.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "src/init-db.js", "check"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  wallet-connect-app:
+    build:
+      context: ./wallet-connect-app
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=${WALLET_CONNECT_PROJECT_ID}
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./wallet-connect-app:/app
+      - /app/node_modules
+    restart: unless-stopped 
